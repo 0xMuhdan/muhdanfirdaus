@@ -58,7 +58,7 @@ const HerroSection = () => {
             </div>
             <div className='relative flex flex-col items-center gap-4 w-full md:w-auto'>
                 <TiltedCard
-                    imageSrc="/myfoto.webp"
+                    imageSrc="/myfoto.jpg"
                     altText="Muhdan Firdaus Salam"
                     captionText="Muhdan Firdaus Salam - Full-Stack Developer"
                     containerHeight="400px"
