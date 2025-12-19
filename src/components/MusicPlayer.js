@@ -322,26 +322,31 @@ export default function MusicPlayer() {
             </div>
           </div>
         ) : (
-          // Expanded Player - Modern Spotify Style
-          <div className="bg-gradient-to-br from-zinc-900/98 via-zinc-800/98 to-zinc-900/98 backdrop-blur-2xl text-white p-6 rounded-3xl shadow-2xl border border-white/10 w-96">
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="font-bold text-lg flex items-center gap-2 text-white">
-                <Music size={24} className="text-emerald-500" />
-                Music Player
-              </h3>
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={() => setIsMinimized(true)}
-                  className="p-2 hover:bg-white/10 rounded-lg transition-all duration-200"
-                >
-                  <Minimize2 size={18} className="text-zinc-400 hover:text-white transition-colors" />
-                </button>
-                <button
-                  onClick={() => setIsVisible(false)}
-                  className="p-2 hover:bg-white/10 rounded-lg transition-all duration-200"
-                >
-                  <X size={18} className="text-zinc-400 hover:text-white transition-colors" />
-                </button>
+          // Expanded Player - Modern Spotify Style with better scroll handling
+          <div className="bg-gradient-to-br from-zinc-900/98 via-zinc-800/98 to-zinc-900/98 backdrop-blur-2xl text-white p-6 rounded-3xl shadow-2xl border border-white/10 w-96 max-h-[90vh] overflow-y-auto scrollbar-thin scrollbar-thumb-zinc-700 scrollbar-track-transparent">
+            {/* Sticky Header */}
+            <div className="sticky top-0 bg-gradient-to-br from-zinc-900/98 via-zinc-800/98 to-zinc-900/98 backdrop-blur-2xl z-10 pb-4 -mt-6 -mx-6 px-6 pt-6 mb-2">
+              <div className="flex items-center justify-between">
+                <h3 className="font-bold text-lg flex items-center gap-2 text-white">
+                  <Music size={24} className="text-emerald-500" />
+                  Music Player
+                </h3>
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => setIsMinimized(true)}
+                    className="p-2 hover:bg-white/10 rounded-lg transition-all duration-200"
+                    title="Minimize"
+                  >
+                    <Minimize2 size={18} className="text-zinc-400 hover:text-white transition-colors" />
+                  </button>
+                  <button
+                    onClick={() => setIsVisible(false)}
+                    className="p-2 hover:bg-white/10 rounded-lg transition-all duration-200"
+                    title="Close"
+                  >
+                    <X size={18} className="text-zinc-400 hover:text-white transition-colors" />
+                  </button>
+                </div>
               </div>
             </div>
 
@@ -461,12 +466,12 @@ export default function MusicPlayer() {
               />
             </div>
 
-            {/* Playlist */}
-            <div className="max-h-56 overflow-y-auto scrollbar-thin scrollbar-thumb-zinc-700 scrollbar-track-transparent">
+            {/* Playlist - Remove nested scroll */}
+            <div>
               <h4 className="font-semibold mb-3 text-sm text-zinc-400 uppercase tracking-wider px-2">
                 Playlist ({playlist.length} songs)
               </h4>
-              <div className="space-y-1">
+              <div className="space-y-1 pb-4">
                 {playlist.map((track, index) => (
                   <button
                     key={index}
