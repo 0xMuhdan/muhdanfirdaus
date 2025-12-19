@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Pendaftaran</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Form Pendaftaran</h2>
+    <form>
+      <label for="nama" class="form-label">Nama:</label>
+      <input type="text" id="nama" class="form-input" placeholder="Tulis nama kamu" required>
+      <div class="error-text">Nama wajib diisi</div>
+      <label for="email" class="form-label">Email:</label>
+      <input type="email" id="email" class="form-input" placeholder="email@contoh.com" required>
+      <div class="error-text">Email tidak valid</div>
+      <label for="password" class="form-label">Password:</label>
+      <input type="password" id="password" class="form-input" placeholder="Password" required>
+      <div class="error-text">Password wajib diisi</div>
+      <p class="form-label">Jenis Kelamin:</p>
+      <input type="radio" id="pria" name="gender" value="laki-laki">
+      <label for="pria">Laki-laki</label>
+      <input type="radio" id="wanita" name="gender" value="perempuan">
+      <label for="wanita">Perempuan</label>
+      <p class="form-label">Hobi:</p>
+      <input type="checkbox" id="baca" name="hobi" value="membaca">
+      <label for="baca">Membaca</label>
+      <input type="checkbox" id="olahraga" name="hobi" value="olahraga">
+      <label for="olahraga">Olahraga</label>
+      <label for="kota" class="form-label">Kota:</label>
+      <select id="kota" name="kota" class="form-select">
+        <option value="">-- Pilih Kota --</option>
+        <option value="jakarta">Jakarta</option>
+        <option value="bandung">Bandung</option>
+        <option value="surabaya">Surabaya</option>
+      </select>
+      <label for="tanggal" class="form-label">Tanggal Lahir:</label>
+      <input type="date" id="tanggal" class="form-input">
+      <label for="file" class="form-label">Upload File:</label>
+      <input type="file" id="file" class="form-input" accept=".jpg,.png,.pdf">
+      <button type="submit" class="form-button">Daftar</button>
+      <button type="reset" class="form-button reset-btn">Reset</button>
+    </form>
+  </div>
+</body>
+</html>
