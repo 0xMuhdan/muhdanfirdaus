@@ -14,7 +14,7 @@ const HerroSection = () => {
                     Hello! I'm Muhdan Firdaus Salam from Tasikmalaya, West Java, Indonesia. As a passionate <span className='text-xl font-bold text-white/80'>Full-Stack Web2</span> and <span className='text-xl font-bold text-white/80'>Fullstack Web3 Developer</span>, I specialize in building scalable web applications and secure blockchain solutions. My expertise spans across Web2 and Web3 technologies, where I constantly innovate, solve complex problems, and embrace the latest tech trends.
 
                 </p>
-                <div className='flex flex-col md:flex-row gap-4 items-center md:items-start'>
+                <div className='flex flex-col md:flex-row gap-4 items-center md:items-start flex-wrap'>
                     <Link href="mailto:muhdanfirdaus8@gmail.com" className='inline-block'>
                         <div>
                             <div className='md:text-3xl text-xl flex gap-2'>
@@ -37,6 +37,19 @@ const HerroSection = () => {
                                     className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
                                 >
                                     <h1 className=' font-bold hover:scale-[1.02] '>Tugas Kuliah</h1>📝
+                                </HoverBorderGradient>
+                            </div>
+                        </div>
+                    </Link>
+                    <Link href="/aktivitas-kampus" className='inline-block'>
+                        <div>
+                            <div className='md:text-3xl text-xl flex gap-2'>
+                                <HoverBorderGradient
+                                    containerClassName="rounded-full"
+                                    as="button"
+                                    className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+                                >
+                                    <h1 className=' font-bold hover:scale-[1.02] '>Aktivitas Kampus</h1>🎓
                                 </HoverBorderGradient>
                             </div>
                         </div>
